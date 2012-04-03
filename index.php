@@ -1,6 +1,7 @@
 <?php
-
-system('./graph.m ./osaka2011.csv');
+if(!file_exists('./osaka2011.png')){
+	exec('./graph.m ./osaka2011.csv');
+}
 list($w, $h) = getimagesize('./osaka2011.png');
 $w = round($w * 0.8);
 $h = round($h * 0.8);
