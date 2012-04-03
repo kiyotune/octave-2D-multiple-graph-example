@@ -20,7 +20,6 @@ data = dlmread(csv_file, ',', 1, 0);	% すべてのデータをバッファに�
 x = 1:12;	% [X軸データ] 月：1,2...12月
 temp_month_ave = data(:,1);	% 平均気温
 precipitation = data(:,6);	% 降水量
-precipitation
 
 clear data;	% バッファクリア
 
@@ -59,8 +58,8 @@ title('Weather information of Osaka 2011', 'Fontsize', 18);	% graph title
 lx = x(1) + (x(length(x)) - x(1)) / 2;
 ly = range_y(1) - 2.5;	% 最後にプロットした系列の座標に追従
 text(lx, ly, 'Month', 'Fontsize', 12, 'VerticalAlignment','top', 'HorizontalAlignment','center');
-ylabel(ax(2), "Precipitation(mm)", 'Fontsize', 12);
-ylabel(ax(1), "Temperature(C)", 'Fontsize', 12);
+ylabel(ax(1), "Precipitation(mm)", 'Fontsize', 12);
+ylabel(ax(2), "Temperature(C)", 'Fontsize', 12);
 
 %*****************************************
 % X軸のデータラベルに任意の文字列を表示
